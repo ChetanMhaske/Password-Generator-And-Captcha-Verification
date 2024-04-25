@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"],
+.input-group input[type="checkbox"],
+.input-group button {
+    width: calc(100% - 30px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.input-group button {
+    background-color: #4682B4;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-group button:hover {
+    background-color: #3577a8;
+}
+
+#password {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#passwordStrength {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    animation: fadeInOut 1s infinite alternate; /* Add animation */
+}
+
+#captcha {
+    font-size: 16px;
+    font-weight: bold;
+    animation: slideInFromLeft 1s; /* Add animation */
+}
+
+/* Animation Keyframes */
+@keyframes fadeInOut {
+    0% { color: black; }
+    100% { color: gray; }
+}
+
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
