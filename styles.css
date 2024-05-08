@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
+    background-color: #574f4f; /* Light gray background */
     margin: 0;
     padding: 0;
 }
@@ -9,14 +9,16 @@ body {
     width: 80%;
     max-width: 600px;
     margin: 50px auto;
-    background-color: #fff;
+    background: linear-gradient(135deg, #5ee7df, #66a6ff); /* RGB linear gradient */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease; /* Fade in animation */
 }
 
 h1 {
     text-align: center;
+    color: #fff; /* White text */
 }
 
 .input-group {
@@ -24,8 +26,10 @@ h1 {
 }
 
 .input-group label {
-    display: block;
+    display: inline-block; /* Display labels inline */
     margin-bottom: 5px;
+    margin-right: 10px; /* Add margin-right to create space between labels and checkboxes */
+    color: #fff; /* White text */
 }
 
 .input-group input[type="text"],
@@ -37,6 +41,9 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+    color: #333; /* Dark gray text */
+    transition: transform 0.3s ease; /* Add transition effect */
 }
 
 .input-group input[type="checkbox"] {
@@ -53,6 +60,7 @@ h1 {
 
 .input-group button:hover {
     background-color: #3577a8;
+    transform: scale(1.05); /* Add scaling effect on hover */
 }
 
 #password {
@@ -73,7 +81,16 @@ h1 {
     animation: slideInFromLeft 1s; /* Add animation */
 }
 
-/* Animation Keyframes */
+/* Additional Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes fadeInOut {
     0% { color: black; }
     100% { color: gray; }
